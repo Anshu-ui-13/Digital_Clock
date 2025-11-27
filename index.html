@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="hero fade-in">
+    <div class="container">
+      <div class="clock-box glass">
+        <div class="clock fade-in">
+          <span id="hours">00</span>
+          <span>:</span>
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+          <span id="ampm">AM</span>
+        </div>
+
+        <div class="date-time fade-in">
+          <span id="day">Monday</span>,
+          <span id="date">01 Jan 2025</span>
+        </div>
+
+        <div class="buttons fade-in">
+          <button id="seeCalendarBtn" class="btn">📅 See Calendar</button>
+          <button id="settingsBtn" class="btn">⚙️ Settings</button>
+          <button id="themeToggle" class="btn">🌗 Toggle Mode</button>
+        </div>
+
+        <!-- Calendar -->
+        <div class="calendar hidden glass fade-in" id="calendarBox">
+          <div class="calendar-header">
+            <button id="prevMonth" class="nav-btn">⬅️</button>
+            <h3 id="monthYear"></h3>
+            <button id="nextMonth" class="nav-btn">➡️</button>
+          </div>
+          <div id="calendarBody"></div>
+        </div>
+
+        <!-- Settings -->
+        <div class="settings hidden glass fade-in" id="settingsPanel">
+          <h3>Customize Background</h3>
+          <label>Change Color:</label>
+          <input type="color" id="bgColorPicker" value="#1e1e2f">
+          <br><br>
+          <label>Change Background Image:</label>
+          <input type="file" id="bgImagePicker" accept="image/*">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tick Sound -->
+  <audio id="tickSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2ad601a2e7.mp3?filename=tick-110803.mp3" preload="auto"></audio>
+</body>
+</html>
